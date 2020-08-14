@@ -1,0 +1,779 @@
+<?xml version="1.0" encoding="utf-8"?>
+<!-- This URDF was automatically created by SolidWorks to URDF Exporter! Originally created by Stephen Brawner (brawner@gmail.com) 
+     Commit Version: 1.5.1-0-g916b5db  Build Version: 1.5.7152.31018
+     For more information, please see http://wiki.ros.org/sw_urdf_exporter -->
+<robot
+  name="body_2">
+  <link
+    name="base_link">
+    <inertial>
+      <origin
+        xyz="-0.155684035227245 -0.15038557963088 0.394222306978325"
+        rpy="0 0 0" />
+      <mass
+        value="2.10754232509242" />
+      <inertia
+        ixx="0.00435729546118946"
+        ixy="1.96212800649361E-06"
+        ixz="-3.16106836374245E-05"
+        iyy="0.00431021528237915"
+        iyz="2.71881252233039E-06"
+        izz="0.00679613920376316" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/base_link.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/base_link.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <link
+    name="shoulder_link_lf">
+    <inertial>
+      <origin
+        xyz="0.00717177702659216 -0.0537952753446505 0.385991412345479"
+        rpy="0 0 0" />
+      <mass
+        value="0.218350078498136" />
+      <inertia
+        ixx="0.000119098761266887"
+        ixy="-1.26838304791238E-08"
+        ixz="-2.38167486209614E-06"
+        iyy="9.40567738246345E-05"
+        iyz="1.20632408009471E-09"
+        izz="0.000178357454008516" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/shoulder_link_lf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/shoulder_link_lf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_joint_lf"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulder_link_lf" />
+    <axis
+      xyz="0.0005065 1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="100"
+      velocity="1.5" />
+    <dynamics
+      damping="10"
+      friction="0.1" />
+  </joint>
+  <link
+    name="thigh_link_lf">
+    <inertial>
+      <origin
+        xyz="0.0011572 -0.031402 0.26058"
+        rpy="0 0 0" />
+      <mass
+        value="0.4738" />
+      <inertia
+        ixx="0.0015065"
+        ixy="-5.1466E-08"
+        ixz="2.4239E-20"
+        iyy="0.0014049"
+        iyz="-4.0206E-18"
+        izz="0.00020143" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/thigh_link_lf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/thigh_link_lf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow_joint_lf"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_link_lf" />
+    <child
+      link="thigh_link_lf" />
+    <axis
+      xyz="0.0005065 1 0" />
+    <limit
+      lower="-1.5708"
+      upper="0.5708"
+      effort="100"
+      velocity="1.5" />
+    <dynamics
+      damping="10"
+      friction="0.1" />
+  </joint>
+  <link
+    name="shank_link_lf">
+    <inertial>
+      <origin
+        xyz="-1.2433E-05 -0.024548 0.06946"
+        rpy="0 0 0" />
+      <mass
+        value="0.19795" />
+      <inertia
+        ixx="0.00028816"
+        ixy="-1.3086E-08"
+        ixz="6.3593E-21"
+        iyy="0.00026232"
+        iyz="-7.3321E-19"
+        izz="5.482E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/shank_link_lf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/shank_link_lf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="knee_joint_lf"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="thigh_link_lf" />
+    <child
+      link="shank_link_lf" />
+    <axis
+      xyz="0.0005065 1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="100"
+      velocity="1.5" />
+    <dynamics
+      damping="10"
+      friction="0.1" />
+  </joint>
+  <link
+    name="shoulder_link_rf">
+    <inertial>
+      <origin
+        xyz="0.00678657716852507 -0.24621183307722 0.385984477189113"
+        rpy="0 0 0" />
+      <mass
+        value="0.218350078498136" />
+      <inertia
+        ixx="0.000119007083932726"
+        ixy="-1.26373956875525E-08"
+        ixz="-4.80928295612577E-07"
+        iyy="9.4056773801115E-05"
+        iyz="2.43591345570969E-10"
+        izz="0.000178449131366197" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/shoulder_link_rf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/shoulder_link_rf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_joint_rf"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulder_link_rf" />
+    <axis
+      xyz="0.0005065 1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="100"
+      velocity="1.5" />
+    <dynamics
+      damping="10"
+      friction="0.1" />
+  </joint>
+  <link
+    name="thigh_link_rf">
+    <inertial>
+      <origin
+        xyz="0.00089202 -0.2686 0.26055"
+        rpy="0 0 0" />
+      <mass
+        value="0.4738" />
+      <inertia
+        ixx="0.0015065"
+        ixy="-5.1466E-08"
+        ixz="-2.3111E-20"
+        iyy="0.0014049"
+        iyz="-4.2668E-18"
+        izz="0.00020143" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/thigh_link_rf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/thigh_link_rf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow_joint_rf"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_link_rf" />
+    <child
+      link="thigh_link_rf" />
+    <axis
+      xyz="0.0005065 1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="100"
+      velocity="1.5" />
+    <dynamics
+      damping="10"
+      friction="0.1" />
+  </joint>
+  <link
+    name="shank_link_rf">
+    <inertial>
+      <origin
+        xyz="-0.00013952 -0.27545 0.069436"
+        rpy="0 0 0" />
+      <mass
+        value="0.19795" />
+      <inertia
+        ixx="0.00028816"
+        ixy="-1.3086E-08"
+        ixz="-8.1673E-19"
+        iyy="0.00026232"
+        iyz="-7.0243E-19"
+        izz="5.482E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/shank_link_rf.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/shank_link_rf.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="knee_joint_rf"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="thigh_link_rf" />
+    <child
+      link="shank_link_rf" />
+    <axis
+      xyz="0.000506502354392091 0.999999871727674 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="100"
+      velocity="1.5" />
+    <dynamics
+      damping="10"
+      friction="0.1" />
+  </joint>
+  <link
+    name="shoulder_link_lb">
+    <inertial>
+      <origin
+        xyz="-0.316119794412013 -0.0542536019385395 0.384115405127243"
+        rpy="0 0 0" />
+      <mass
+        value="0.218350078498136" />
+      <inertia
+        ixx="0.000119007090333597"
+        ixy="2.57750436027565E-19"
+        ixz="-4.80928357302368E-07"
+        iyy="9.40567674002435E-05"
+        iyz="9.53966235697497E-21"
+        izz="0.000178449131366197" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/shoulder_link_lb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/shoulder_link_lb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_joint_lb"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulder_link_lb" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="100"
+      velocity="1.5" />
+    <dynamics
+      damping="10"
+      friction="0.1" />
+  </joint>
+  <link
+    name="thigh_link_lb">
+    <inertial>
+      <origin
+        xyz="-0.31276 -0.031863 0.25868"
+        rpy="0 0 0" />
+      <mass
+        value="0.4738" />
+      <inertia
+        ixx="0.0015065"
+        ixy="3.9168E-19"
+        ixz="-4.5601E-18"
+        iyy="0.0014049"
+        iyz="3.3947E-19"
+        izz="0.00020143" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/thigh_link_lb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/thigh_link_lb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow_joint_lb"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_link_lb" />
+    <child
+      link="thigh_link_lb" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="100"
+      velocity="1.5" />
+    <dynamics
+      damping="10"
+      friction="0.1" />
+  </joint>
+  <link
+    name="shank_link_lb">
+    <inertial>
+      <origin
+        xyz="-0.31222 -0.02501 0.067567"
+        rpy="0 0 0" />
+      <mass
+        value="0.19795" />
+      <inertia
+        ixx="0.00028816"
+        ixy="1.7816E-19"
+        ixz="-1.6642E-20"
+        iyy="0.00026232"
+        iyz="-6.9745E-19"
+        izz="5.482E-05" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/shank_link_lb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/shank_link_lb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="knee_joint_lb"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="thigh_link_lb" />
+    <child
+      link="shank_link_lb" />
+    <axis
+      xyz="0.0005065 1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="100"
+      velocity="1.5" />
+    <dynamics
+      damping="10"
+      friction="0.1" />
+  </joint>
+  <link
+    name="shoulder_link_rb">
+    <inertial>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <mass
+        value="0" />
+      <inertia
+        ixx="0"
+        ixy="0"
+        ixz="0"
+        iyy="0"
+        iyz="0"
+        izz="0" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/shoulder_link_rb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="1 1 1 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/shoulder_link_rb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="shoulder_joint_rb"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="base_link" />
+    <child
+      link="shoulder_link_rb" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="100"
+      velocity="1.5" />
+    <dynamics
+      damping="10"
+      friction="0.1" />
+  </joint>
+  <link
+    name="thigh_link_rb">
+    <inertial>
+      <origin
+        xyz="-0.31276 -0.26906 0.25868"
+        rpy="0 0 0" />
+      <mass
+        value="0.4738" />
+      <inertia
+        ixx="0.0015065"
+        ixy="3.7799E-19"
+        ixz="-4.5547E-18"
+        iyy="0.0014049"
+        iyz="1.8667E-19"
+        izz="0.00020143" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/thigh_link_rb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.79216 0.81961 0.93333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/thigh_link_rb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="elbow_joint_rb"
+    type="revolute">
+    <origin
+      xyz="0 0 0"
+      rpy="0 0 0" />
+    <parent
+      link="shoulder_link_rb" />
+    <child
+      link="thigh_link_rb" />
+    <axis
+      xyz="0 1 0" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="100"
+      velocity="1.5" />
+    <dynamics
+      damping="10"
+      friction="0.1" />
+  </joint>
+  <link
+    name="shank_link_rb">
+    <inertial>
+      <origin
+        xyz="-0.157777969833373 0.301408289526244 -0.114944515476192"
+        rpy="0 0 0" />
+      <mass
+        value="0.197946507794996" />
+      <inertia
+        ixx="0.000288156381500193"
+        ixy="2.03184467607051E-20"
+        ixz="1.74636529331936E-19"
+        iyy="5.48196355836687E-05"
+        iyz="6.83615271764718E-19"
+        izz="0.000262320444376973" />
+    </inertial>
+    <visual>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/shank_link_rb.STL" />
+      </geometry>
+      <material
+        name="">
+        <color
+          rgba="0.792156862745098 0.819607843137255 0.933333333333333 1" />
+      </material>
+    </visual>
+    <collision>
+      <origin
+        xyz="0 0 0"
+        rpy="0 0 0" />
+      <geometry>
+        <mesh
+          filename="package://body_2/meshes/shank_link_rb.STL" />
+      </geometry>
+    </collision>
+  </link>
+  <joint
+    name="knee_joint_rb"
+    type="revolute">
+    <origin
+      xyz="-0.15444 -0.16097 0.36897"
+      rpy="-1.5708 0 0" />
+    <parent
+      link="thigh_link_rb" />
+    <child
+      link="shank_link_rb" />
+    <axis
+      xyz="0.0005065 0 1" />
+    <limit
+      lower="-1.5708"
+      upper="1.5708"
+      effort="100"
+      velocity="1.5" />
+    <dynamics
+      damping="10"
+      friction="0.1" />
+  </joint>
+</robot>
